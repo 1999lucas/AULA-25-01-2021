@@ -12,14 +12,9 @@ public class Conta {
 	// Métodos de acesso aos atributos da classe
 	// *** getter and setter
 	
-	public void setTipo(String tipo) {
-		if (tipo.equals("Corrente")|| tipo.equals("Poupança")) {
-			
+	public void setTipo(String tipoConta) {
+		tipo = tipoConta;
 		
-		this.tipo = tipo;
-		} else {
-			System.out.println("O tipo deve ser Corrente ou Poupança");
-		}
 	}
 	
 	public void depositar(double valorDeposito) {
