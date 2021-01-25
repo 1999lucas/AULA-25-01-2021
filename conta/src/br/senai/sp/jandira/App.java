@@ -1,5 +1,6 @@
 package br.senai.sp.jandira;
 
+import br.senai.sp.jandira.model.Cliente;
 import br.senai.sp.jandira.model.Conta;
 
 public class App {
@@ -7,37 +8,45 @@ public class App {
 	public static void main(String[] args) {
 
 		
-		Conta contaDaAna = new Conta();
+		Conta contaAnaGomes = new Conta();
 		Conta contaDoJoao = new Conta();
-		// CONTA DA ANA
-		contaDaAna.titular = "Ana Gomes";
-		contaDaAna.numero = "111-98";
-		contaDaAna.setTipo("");
-		contaDaAna.ativa = true;
-		contaDaAna.chequeEspecial = 200;
-		contaDaAna.depositar(100);
-		contaDaAna.mostrarSaldoDaConta();
-		contaDaAna.depositar(30);
-		contaDaAna.mostrarSaldoDaConta();
-		contaDaAna.sacar(50);
-		contaDaAna.mostrarSaldoDaConta();
-		contaDaAna.sacar(500);
-		contaDaAna.mostrarSaldoDaConta();
-		contaDaAna.sacar(50);
-		contaDaAna.mostrarSaldoDaConta();
-		contaDaAna.sacar(80);
-		contaDaAna.mostrarSaldoDaConta();
-		contaDaAna.depositar(100);
-		contaDaAna.mostrarSaldoDaConta();
-		contaDaAna.getSaldo();
-		contaDaAna.getSaldo();
 		
-		double saldoDaConta = contaDaAna.getSaldo();
+		
+		// CONTA DA ANA
+		contaAnaGomes.setTitular("Ana Gomes");
+		contaAnaGomes.setNumero("111-98");
+		contaAnaGomes.setTipo("Poupança");
+		contaAnaGomes.setAtiva(true);
+		contaAnaGomes.setChequeEspecial(200);
+		contaAnaGomes.depositar(100);
+		contaAnaGomes.mostrarSaldoDaConta();
+		contaAnaGomes.depositar(30);
+		contaAnaGomes.mostrarSaldoDaConta();
+		contaAnaGomes.sacar(50);
+		contaAnaGomes.mostrarSaldoDaConta();
+		contaAnaGomes.sacar(500);
+		contaAnaGomes.mostrarSaldoDaConta();
+		contaAnaGomes.sacar(50);
+		contaAnaGomes.mostrarSaldoDaConta();
+		contaAnaGomes.sacar(80);
+		contaAnaGomes.mostrarSaldoDaConta();
+		contaAnaGomes.depositar(100);
+		contaAnaGomes.mostrarSaldoDaConta();
+		contaAnaGomes.getSaldo();
+		contaAnaGomes.getSaldo();
+		
+		double saldoDaConta = contaAnaGomes.getSaldo();
 		
 		System.out.println("****O saldo da conta é "+ saldoDaConta);
 		
-		//CONTA DO JOAO
 		
 		contaDoJoao.setTipo("Corrente");
+		
+		System.out.println("Nome: " + contaAnaGomes.getTitular());
+		System.out.println("Conta: " + contaAnaGomes.getNumero());
+		System.out.println("Tipo: " + contaAnaGomes.getTitular());
+		System.out.println("Limite: " + contaAnaGomes.getChequeEspecial());
+		
+		
 	}
 }
